@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>예약까지 이어지는 인스타 프로필 세팅 9가지 — 영구오빠</title>
+<meta name="description" content="릴스를 보고 들어온 사람이 남을지 나갈지는 프로필 한 화면에서 3초 안에 갈립니다. 아이디부터 탭 정리까지 9가지.">
+<meta name="author" content="영구오빠">
+<meta name="theme-color" content="#F4EEE6">
+<meta property="og:type" content="article">
+<meta property="og:title" content="예약까지 이어지는 인스타 프로필 세팅 9가지 — 영구오빠">
+<meta property="og:description" content="릴스를 보고 들어온 사람이 남을지 나갈지는 프로필 한 화면에서 3초 안에 갈립니다. 아이디부터 탭 정리까지 9가지.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4EEE6; --card:#FBF8F3; --ink:#2B2521; --body:#3A342E;
+    --muted:#8A7E72; --clay:#A6785F; --clay-dk:#8A5E45; --clay-lt:#C9A488;
+    --deep:#6E4A34; --line:rgba(43,37,33,0.16); --line-soft:rgba(43,37,33,0.08);
+    --ok:#5E7F5E; --bad:#A8543A;
+    --serif:'Noto Serif KR',serif; --sans:'Noto Sans KR',sans-serif; --disp:'Cormorant Garamond',serif;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html,body{margin:0;background:var(--paper)}
+  body{font-family:var(--serif);color:var(--ink);-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
+  ::selection{background:#D9B79F;color:var(--ink)}
+
+  .eyebrow-bar{max-width:720px;margin:0 auto;padding:34px 28px 0;display:flex;align-items:center;justify-content:center;gap:12px}
+  .eyebrow-bar span.rule{height:1px;width:34px;background:rgba(43,37,33,0.25)}
+  .eyebrow-bar span.txt{font-family:var(--sans);font-size:11px;letter-spacing:.34em;color:var(--clay-dk);font-weight:700}
+
+  main{max-width:680px;margin:0 auto;padding:0 28px 120px}
+
+  .kicker{font-family:var(--sans);font-size:12px;letter-spacing:.32em;color:var(--clay);font-weight:700;margin-bottom:22px}
+  h1{font-size:34px;font-weight:700;line-height:1.42;letter-spacing:-.01em;margin:0 0 28px}
+  p{font-size:18px;line-height:1.95;color:var(--body);margin:0 0 1.4em}
+  b{font-weight:600}
+
+  .lede{padding-top:80px}
+  .meta{font-family:var(--sans);font-size:13px;color:var(--muted);letter-spacing:.02em;line-height:2;border-top:1px solid var(--line);padding-top:20px;margin-top:36px}
+
+  /* 섹션 */
+  .step{padding-top:76px}
+  .step-head{display:flex;align-items:baseline;gap:18px;margin-bottom:22px}
+  .step-head .no{font-family:var(--disp);font-size:64px;font-weight:500;color:var(--clay-lt);line-height:.8}
+  .step-head .ln{flex:1;height:1px;background:var(--line);transform:translateY(-8px)}
+  .step-head .cnt{font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.08em;transform:translateY(-6px)}
+  h2{font-size:26px;font-weight:700;line-height:1.5;margin:0 0 10px;letter-spacing:-.01em}
+  .sub{font-family:var(--sans);font-size:14.5px;line-height:1.85;color:var(--muted);margin:0 0 26px}
+  h3{font-family:var(--sans);font-size:12px;letter-spacing:.24em;color:var(--clay);font-weight:700;margin:38px 0 14px}
+
+  /* 경로 */
+  .path{display:flex;gap:14px;align-items:baseline;background:var(--card);border:1px solid var(--line);padding:14px 18px;margin:0 0 22px}
+  .path .k{flex:none;font-family:var(--sans);font-size:11px;letter-spacing:.24em;color:var(--clay);font-weight:700}
+  .path .v{font-family:var(--sans);font-size:15px;line-height:1.7;color:var(--ink);font-weight:500}
+  .m{font-family:var(--sans);font-size:.88em;font-weight:500;color:var(--deep);background:rgba(166,120,95,.12);padding:1px 7px;white-space:nowrap}
+
+  /* 리스트 */
+  ul.list,ol.list{margin:0 0 1.4em;padding:0;list-style:none}
+  ul.list li,ol.list li{position:relative;font-size:17px;line-height:1.85;color:var(--body);padding:6px 0 6px 22px}
+  ul.list li::before{content:"";position:absolute;left:2px;top:20px;width:9px;height:1px;background:var(--clay)}
+  ol.list{counter-reset:o}
+  ol.list li{counter-increment:o;padding-left:30px}
+  ol.list li::before{content:counter(o);position:absolute;left:0;top:7px;font-family:var(--disp);font-size:21px;color:var(--clay);line-height:1.4}
+
+  /* 요약 표 */
+  .sum{border-top:1px solid var(--ink);margin:0 0 8px}
+  .sum .r{display:grid;grid-template-columns:44px 1fr 1.25fr;gap:14px;align-items:baseline;padding:15px 0;border-bottom:1px solid var(--line-soft)}
+  .sum .r.h{padding:10px 0;border-bottom:1px solid var(--line)}
+  .sum .r.h span{font-family:var(--sans);font-size:11px;letter-spacing:.24em;color:var(--muted);font-weight:700}
+  .sum .n{font-family:var(--disp);font-size:28px;color:var(--clay);line-height:1}
+  .sum .w{font-family:var(--sans);font-size:14px;line-height:1.7;color:var(--muted)}
+  .sum .v{font-size:16.5px;line-height:1.7;color:var(--ink);font-weight:500}
+  .sum.c4 .r{grid-template-columns:1fr 1.6fr .6fr .8fr}
+
+  /* 표 */
+  .tbl-wrap{margin:0 0 24px;overflow-x:auto}
+  table.tbl{width:100%;border-collapse:collapse;border-top:1px solid var(--ink)}
+  .tbl th{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--muted);font-weight:700;text-align:left;padding:11px 12px 11px 0;border-bottom:1px solid var(--line)}
+  .tbl td{font-size:16px;line-height:1.75;color:var(--body);padding:14px 12px 14px 0;border-bottom:1px solid var(--line-soft);vertical-align:top}
+  .tbl td:first-child{font-family:var(--sans);font-size:14.5px;font-weight:700;color:var(--ink);white-space:nowrap}
+  .tbl td.wrap{white-space:normal}
+  .tbl td.nw{white-space:nowrap}
+  .tbl td em{font-style:normal;font-family:var(--sans);font-size:13.5px;color:var(--muted);display:block;margin-top:4px;line-height:1.7}
+  .tbl .star{color:var(--clay-dk);font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.06em;margin-right:4px}
+  .mark{display:inline-block;min-width:20px;font-family:var(--sans);font-weight:700}
+  .mark.ok{color:var(--ok)} .mark.no{color:var(--bad)} .mark.mid{color:var(--clay)}
+
+  /* 콜아웃 */
+  .callout{margin:32px 0;padding:26px 30px;background:rgba(255,255,255,.55);border-left:2px solid var(--clay-lt)}
+  .callout .t{font-family:var(--sans);font-size:11px;letter-spacing:.28em;color:var(--clay);font-weight:700;margin-bottom:14px}
+  .callout p{font-size:16.5px;line-height:1.85;margin:0 0 .6em}
+  .callout p:last-child{margin-bottom:0}
+  .callout .go{font-family:var(--sans);font-size:15px;font-weight:700;color:var(--deep);line-height:1.8}
+  .callout.warn{border-left-color:var(--bad)}
+  .callout.warn .t{color:var(--bad)}
+  .callout .row{display:flex;gap:14px;align-items:baseline;padding:9px 0;border-bottom:1px dashed rgba(43,37,33,.16)}
+  .callout .row:last-child{border-bottom:none}
+  .callout .row b{font-family:var(--sans);font-size:13px;color:var(--deep);min-width:86px;flex-shrink:0}
+  .callout .row span{font-size:16px;line-height:1.7;color:var(--body)}
+  .note{font-family:var(--sans);font-size:14.5px;line-height:1.85;color:var(--muted);border-top:1px dashed var(--line);padding-top:14px;margin:24px 0 0}
+
+  /* 체크 항목 */
+  .group{font-family:var(--sans);font-size:12px;letter-spacing:.24em;color:var(--clay);font-weight:700;margin:30px 0 4px}
+  .item{display:flex;gap:15px;align-items:flex-start;padding:15px 0;border-bottom:1px solid var(--line-soft);cursor:pointer}
+  .item input{position:absolute;opacity:0;width:0;height:0}
+  .box{flex-shrink:0;width:21px;height:21px;border:1.5px solid var(--clay-lt);background:#fff;margin-top:3px;
+    display:flex;align-items:center;justify-content:center;transition:all .15s ease}
+  .box::after{content:"";width:9px;height:5px;border-left:2px solid #fff;border-bottom:2px solid #fff;
+    transform:rotate(-45deg) scale(.4);opacity:0;transition:all .15s ease;margin-top:-2px}
+  .item input:checked + .box{background:var(--clay-dk);border-color:var(--clay-dk)}
+  .item input:checked + .box::after{opacity:1;transform:rotate(-45deg) scale(1)}
+  .item input:focus-visible + .box{outline:2px solid var(--deep);outline-offset:3px}
+  .item .txt{font-size:17px;line-height:1.72;color:var(--body)}
+  .item .txt em{font-style:normal;font-family:var(--sans);font-size:13.5px;color:var(--muted);display:block;margin-top:5px;line-height:1.7}
+  .item input:checked ~ .txt{color:var(--muted)}
+  .item:hover .box{border-color:var(--clay-dk)}
+
+  /* 판정 */
+  .judge{margin:34px 0 0;padding:24px 28px;background:var(--card);border:1px solid var(--line);
+    border-left:3px solid var(--clay-lt);transition:border-color .2s ease}
+  .judge .t{font-family:var(--sans);font-size:11px;letter-spacing:.28em;color:var(--clay);font-weight:700;margin-bottom:12px}
+  .judge .cnt-line{display:flex;align-items:baseline;gap:9px;margin-bottom:12px}
+  .judge .n{font-family:var(--disp);font-size:40px;font-weight:500;color:var(--deep);line-height:.9}
+  .judge .d{font-family:var(--sans);font-size:13px;color:var(--muted);letter-spacing:.02em}
+  .judge .msg{font-size:16.5px;line-height:1.8;color:var(--body)}
+  .judge.lv-0{border-left-color:#C7BDB2}
+  .judge.lv-1{border-left-color:var(--clay-lt)}
+  .judge.lv-2{border-left-color:var(--clay)}
+  .judge.lv-3{border-left-color:var(--deep)}
+
+  /* 자주 묻는 질문 */
+  .faq{border-bottom:1px solid var(--line-soft)}
+  .faq:first-of-type{border-top:1px solid var(--line)}
+  .faq summary{list-style:none;cursor:pointer;display:flex;gap:14px;align-items:baseline;padding:18px 0;font-size:17.5px;font-weight:600;line-height:1.6;color:var(--ink)}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary .q{flex:none;font-family:var(--disp);font-size:24px;color:var(--clay);line-height:1}
+  .faq summary .pm{margin-left:auto;flex:none;font-family:var(--sans);font-size:18px;color:var(--clay-lt);transition:transform .2s ease}
+  .faq[open] summary .pm{transform:rotate(45deg)}
+  .faq .a{padding:0 0 20px 31px}
+  .faq .a p{font-size:16.5px;line-height:1.9;margin:0 0 .7em}
+  .faq .a p:last-child{margin-bottom:0}
+
+  /* 프롬프트 */
+  .prompt{position:relative;margin:0 0 30px;background:var(--ink);color:#EFE6DA}
+  .prompt .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px 12px 20px;border-bottom:1px solid rgba(255,255,255,.1)}
+  .prompt .bar span{font-family:var(--sans);font-size:12px;letter-spacing:.14em;color:var(--clay-lt);font-weight:700}
+  .prompt .copy{font-family:var(--sans);font-size:12.5px;font-weight:700;color:var(--ink);background:var(--clay-lt);border:none;padding:8px 14px;cursor:pointer;transition:background .15s}
+  .prompt .copy:hover{background:#E4C4A6}
+  .prompt .copy.done{background:#B9CDB0}
+  .prompt pre{margin:0;padding:18px 20px 22px;font-family:var(--sans);font-size:14.5px;line-height:1.85;white-space:pre-wrap;word-break:keep-all;overflow-wrap:anywhere}
+
+  .foot{margin-top:72px;font-family:var(--sans);font-size:13px;line-height:1.95;color:var(--muted);border-top:1px solid var(--line);padding-top:20px}
+  .foot b{color:var(--body)}
+
+  /* 마무리 */
+  .cta{margin-top:70px;padding:44px 34px;background:var(--card);border:1px solid var(--line);text-align:center}
+  .cta .pre{font-family:var(--disp);font-size:14px;letter-spacing:.5em;color:var(--clay);text-transform:uppercase;margin-bottom:18px}
+  .cta h4{font-size:21px;font-weight:700;line-height:1.65;margin:0 0 14px}
+  .cta p{font-size:16px;margin:0}
+  .cta-btn{display:inline-block;margin-top:26px;padding:15px 34px;background:var(--deep);color:#FBF8F3;
+    font-family:var(--sans);font-size:15px;font-weight:700;letter-spacing:.04em;text-decoration:none;transition:background .15s ease}
+  .cta-btn:hover{background:var(--clay-dk)}
+  .cta-url{font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.04em;margin-top:14px}
+
+  .cta-inline{display:flex;gap:16px;align-items:center;background:var(--card);border:1px solid var(--line);
+    padding:20px 22px;margin:64px 0;text-decoration:none;transition:border-color .15s ease}
+  .cta-inline:hover{border-color:var(--clay-lt)}
+  .cta-inline .icon{flex:none;width:40px;height:40px;background:var(--deep);color:#FBF8F3;
+    display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-size:19px;font-weight:500}
+  .cta-inline .txt{flex:1;min-width:0}
+  .cta-inline .txt .t1{display:block;font-family:var(--sans);font-size:15.5px;font-weight:700;color:var(--ink);line-height:1.6;margin-bottom:3px}
+  .cta-inline .txt .t2{display:block;font-family:var(--sans);font-size:13.5px;color:var(--muted);line-height:1.7}
+  .cta-inline .arrow{flex:none;font-family:var(--sans);font-size:13.5px;font-weight:700;color:var(--clay-dk)}
+
+  #dock{position:fixed;left:0;right:0;bottom:0;z-index:60;transform:translateY(140%);opacity:0;
+    transition:transform .35s cubic-bezier(.2,.8,.2,1),opacity .25s ease;pointer-events:none}
+  #dock.show{transform:translateY(0);opacity:1;pointer-events:auto}
+  #dock .inner{max-width:680px;margin:0 auto;padding:0 20px 18px}
+  #dock .card{display:flex;align-items:center;gap:16px;background:var(--ink);color:#F0E7DC;
+    padding:12px 14px 12px 20px;box-shadow:0 12px 30px rgba(43,37,33,.28)}
+  #dock .dock-t1{font-family:var(--sans);font-size:14px;font-weight:700;color:#F0E7DC;line-height:1.5}
+  #dock .dock-t2{font-family:var(--sans);font-size:12.5px;color:#C9BCB1;line-height:1.6;margin-top:2px}
+  #dock .dock-btn{flex:none;background:var(--clay-lt);color:var(--ink);font-family:var(--sans);
+    font-size:14px;font-weight:700;padding:11px 20px;text-decoration:none;white-space:nowrap;transition:background .15s ease}
+  #dock .dock-btn:hover{background:#E4C4A6}
+
+  .sign{margin-top:56px;text-align:center;font-family:var(--sans);font-size:13px;color:var(--muted);letter-spacing:.06em}
+  .tools{display:flex;gap:10px;justify-content:center;margin-top:34px}
+  .tools button{font-family:var(--sans);font-size:12.5px;letter-spacing:.06em;color:var(--clay-dk);
+    background:transparent;border:1px solid var(--line);padding:10px 18px;cursor:pointer;transition:all .15s}
+  .tools button:hover{background:var(--card);border-color:var(--clay-lt)}
+
+  @media (max-width:600px){
+    main{padding:0 20px 90px}
+    h1{font-size:27px}
+    h2{font-size:22px}
+    p{font-size:17px}
+    .step-head .no{font-size:48px}
+    .judge{padding:20px 20px}
+    .judge .n{font-size:34px}
+    .item .txt{font-size:16px}
+    .callout{padding:22px 20px}
+    .callout .row{flex-direction:column;gap:2px}
+    .sum .r{grid-template-columns:34px 1fr;gap:4px 10px}
+    .sum .r .v{grid-column:2}
+    .sum .r.h{display:none}
+    .sum .n{font-size:24px;grid-row:span 2}
+    .sum.c4 .r{grid-template-columns:1fr;gap:4px}
+    .sum.c4 .r .v{grid-column:1}
+    .tbl td{font-size:15px}
+    .tbl td:first-child{white-space:normal;min-width:84px}
+    .path{flex-direction:column;gap:4px}
+    .cta-inline{padding:16px 18px;gap:12px}
+    #dock .dock-t1{font-size:13px}
+    #dock .dock-t2{font-size:11.5px}
+    #dock .card{padding:10px 12px 10px 16px;gap:10px}
+    #dock .dock-btn{font-size:13px;padding:10px 16px}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+  @media print{
+    .tools,#dock,.cta-inline,.prompt .copy{display:none}
+    body{background:#fff}
+    .step{padding-top:44px}
+    .box{border-color:#999}
+    .faq .a{display:block}
+    .cta-btn{background:none!important;color:var(--deep)!important;border:1px solid #999;padding:12px 24px}
+    .judge,.callout,.prompt,.tbl-wrap{page-break-inside:avoid}
+    .prompt{background:#fff;color:var(--ink);border:1px solid #999}
+  }
+</style>
+</head>
+<body>
+
+<div class="eyebrow-bar">
+  <span class="rule"></span>
+  <span class="txt">영구오빠 · 반영구 마케팅</span>
+  <span class="rule"></span>
+</div>
+
+<main>
+  <section class="lede">
+    <div class="kicker">🪪 프로필 점검</div>
+    <h1>예약까지 이어지는<br>인스타 프로필 세팅 9가지</h1>
+    <p>프로필은 광고 페이지가 아니라 <b>대표 페이지</b>입니다.</p>
+    <p>릴스를 보고 들어온 사람이 남을지 나갈지는 <b>이 한 화면에서 3초 안에</b> 갈립니다. 한 번만 제대로 세팅해 두면 그다음부터는 계속 일해 줍니다.</p>
+    <div class="meta">
+      세팅 9가지 · 저장용 체크리스트 13개<br>
+      오늘 10분 · 이번 주 · 신중하게, 세 묶음으로 나눠 하세요
+    </div>
+  </section>
+
+  <!-- ═══ 요약 ═══ -->
+  <section class="step">
+    <div class="step-head"><span class="no">00</span><span class="ln"></span><span class="cnt">30초 요약</span></div>
+    <h2>지금 바꿀 것</h2>
+    <p class="sub">항목마다 경로·바꿀 값·이유를 아래에 정리했습니다.</p>
+    <div class="sum">
+      <div class="r h"><span></span><span>항목</span><span>지금 바꿀 것</span></div>
+      <div class="r"><span class="n">1</span><span class="w">아이디(@)</span><span class="v">뜻 모를 영어 조합 → 검색되고 기억되는 이름</span></div>
+      <div class="r"><span class="n">2</span><span class="w">이름 칸</span><span class="v">비워두지 말고 지역 + 시술 + 브랜드 키워드</span></div>
+      <div class="r"><span class="n">3</span><span class="w">프로필 사진</span><span class="v">깔끔한 배경 + 얼굴이 보이는 사진</span></div>
+      <div class="r"><span class="n">4</span><span class="w">카테고리</span><span class="v">건강/뷰티 같은 업종 표시 켜기</span></div>
+      <div class="r"><span class="n">5</span><span class="w">자기소개</span><span class="v">4줄 공식 — 슬로건 / 경력·성과 / 고객이 얻을 것 / 예약 안내</span></div>
+      <div class="r"><span class="n">6</span><span class="w">링크</span><span class="v">예약·상담으로 바로 가는 링크 1개</span></div>
+      <div class="r"><span class="n">7</span><span class="w">고정 게시물</span><span class="v">대표 시술 1 + 브랜딩 1 + 후기·자료 1</span></div>
+      <div class="r"><span class="n">8</span><span class="w">하이라이트</span><span class="v">고객이 궁금해할 것 3개 이상</span></div>
+      <div class="r"><span class="n">9</span><span class="w">탭 정리</span><span class="v">릴스·리믹스·태그됨 탭에 남는 것 관리</span></div>
+    </div>
+
+    <div class="callout">
+      <div class="t">순서대로 하세요</div>
+      <div class="row"><b>오늘 10분</b><span>② 이름 칸 · ③ 프로필 사진 · ⑤ 자기소개 4줄</span></div>
+      <div class="row"><b>이번 주</b><span>⑥ 링크 · ⑦ 고정 게시물 · ⑧ 하이라이트</span></div>
+      <div class="row"><b>신중하게</b><span>① 아이디. 변경 횟수 제한이 있고, 이미 뿌려 둔 링크·명함·태그가 전부 끊깁니다.</span></div>
+    </div>
+  </section>
+
+  <!-- ═══ 1 ═══ -->
+  <section class="step">
+    <div class="step-head"><span class="no">01</span><span class="ln"></span><span class="cnt">신중하게</span></div>
+    <h2>아이디(@사용자 이름)</h2>
+    <p class="sub">예쁜 이름보다 부를 수 있는 이름이 이깁니다.</p>
+    <div class="path"><span class="k">경로</span><span class="v">프로필 → 프로필 편집 → 사용자 이름</span></div>
+    <h3>바꿀 값</h3>
+    <ul class="list">
+      <li>뜻 모를 영어 조합(<span class="m">abc_1024_x</span>)은 버립니다.</li>
+      <li>검색될 이름 + 브랜드명으로 갑니다. 짧을수록 좋고, 한글 발음 기준 <b>2~4글자 정도</b>가 가장 잘 외워집니다.</li>
+      <li>예시 — <span class="m">09.oppa</span>(영구오빠), <span class="m">__songshop</span>(송샵)</li>
+    </ul>
+    <h3>왜</h3>
+    <p>손님이 나중에 다시 찾아올 때 기억해 내는 건 계정 이름입니다. 명함·카톡·영수증에 적어 줬을 때 <b>손으로 쳐서 바로 나오는지</b>가 기준입니다.</p>
+    <div class="callout warn">
+      <div class="t">아이디는 자주 못 바꿉니다</div>
+      <p>바꾸는 순간 예전 아이디로 연결해 둔 링크, 태그, 검색 결과가 끊깁니다.</p>
+      <p class="go">→ 정말 바꿀 거면 한 번에 끝낼 이름을 정하고 바꾸세요.</p>
+    </div>
+  </section>
+
+  <!-- ═══ 2 ═══ -->
+  <section class="step">
+    <div class="step-head"><span class="no">02</span><span class="ln"></span><span class="cnt">오늘 10분</span></div>
+    <h2>이름 칸<br>— 여기가 검색의 전부입니다</h2>
+    <p class="sub">대부분의 원장님이 여기를 이름만 적거나 아예 비워 둡니다.</p>
+    <div class="path"><span class="k">경로</span><span class="v">프로필 편집 → 이름</span></div>
+    <h3>바꿀 값</h3>
+    <div class="callout">
+      <div class="t">공식</div>
+      <p><b>지역명 + 시술명 + 브랜드명 + 역할</b></p>
+      <div class="row"><b>예시 1</b><span>잠실눈썹문신 강릉눈썹문신 | songshop 송샵 | 대표원장 송민성</span></div>
+      <div class="row"><b>예시 2</b><span>영구오빠 | 눈썹문신 반영구 창업 · 마케팅 코치</span></div>
+    </div>
+    <h3>왜</h3>
+    <p>인스타 검색은 <b>아이디와 이름 칸의 글자</b>를 읽습니다. 자기소개(bio)에 아무리 잘 써도 검색에는 거의 안 잡힙니다.</p>
+    <div class="tbl-wrap"><table class="tbl">
+      <tr><td><span class="mark no">✕</span></td><td><span class="m">OO 뷰티</span> 만 써두면 → "잠실 눈썹문신" 검색에 안 나옵니다.</td></tr>
+      <tr><td><span class="mark ok">○</span></td><td><b>지역명을 꼭 넣으세요.</b> 반영구는 동네 장사입니다. 지역이 빠지면 검색 유입이 통째로 사라집니다.</td></tr>
+      <tr><td><span class="mark ok">○</span></td><td>2호점이 있으면 두 지역을 다 적습니다.</td></tr>
+    </table></div>
+  </section>
+
+  <!-- ═══ 3 ═══ -->
+  <section class="step">
+    <div class="step-head"><span class="no">03</span><span class="ln"></span><span class="cnt">오늘 10분</span></div>
+    <h2>프로필 사진<br>— 얼굴이 신뢰를 만듭니다</h2>
+    <p class="sub">로고는 브랜드를 알리지만, 얼굴은 신뢰를 만듭니다.</p>
+    <div class="path"><span class="k">경로</span><span class="v">프로필 편집 → 사진 변경</span></div>
+    <h3>바꿀 값</h3>
+    <ul class="list">
+      <li>기본 아바타, 로고만 있는 이미지 → <b>원장님 얼굴 사진</b></li>
+      <li>깔끔한 단색 배경(흰색·그린 등)에 상반신, 정면, 웃는 표정</li>
+      <li>프로필은 아주 작은 원으로 보입니다. 얼굴이 <b>원 안에 꽉 차게</b> 잘라 주세요.</li>
+    </ul>
+    <h3>왜</h3>
+    <p>반영구는 손끝에 얼굴을 맡기는 시술입니다. <b>시술자가 누구인지 안 보이면 예약 버튼을 못 누릅니다.</b></p>
+  </section>
+
+  <!-- ═══ 4 ═══ -->
+  <section class="step">
+    <div class="step-head"><span class="no">04</span><span class="ln"></span><span class="cnt">업종 표시</span></div>
+    <h2>카테고리</h2>
+    <p class="sub">프로페셔널 계정에서만 보입니다. 개인 계정이면 먼저 전환하세요.</p>
+    <div class="path"><span class="k">경로</span><span class="v">프로필 편집 → 프로필 정보 → 카테고리</span></div>
+    <h3>바꿀 값</h3>
+    <p><span class="m">건강/뷰티</span> 또는 그에 가까운 업종</p>
+    <h3>왜</h3>
+    <p>이름 바로 아래 회색 글씨로 붙어서, 이 계정이 <b>가게 계정</b>이라는 걸 0.5초 만에 알려 줍니다.</p>
+  </section>
+
+  <!-- ═══ 5 ═══ -->
+  <section class="step">
+    <div class="step-head"><span class="no">05</span><span class="ln"></span><span class="cnt">오늘 10분</span></div>
+    <h2>자기소개 4줄 공식</h2>
+    <p class="sub">예쁜 멘트는 그만 넣으세요. <span class="m">예쁨을 드려요</span> 같은 문장은 아무 정보도 주지 않습니다.</p>
+    <div class="tbl-wrap"><table class="tbl">
+      <tr><th>줄</th><th>역할</th><th>실제 예시</th></tr>
+      <tr><td>1줄</td><td><b>한 줄 슬로건</b><em>내가 누구인지</em></td><td>📈 평범한 공대생 → 월 매출 3000만원 뷰티샵 전문가</td></tr>
+      <tr><td>2줄</td><td><b>경력 &amp; 성과</b><em>왜 믿어야 하는지</em></td><td>🏅 실전 경험으로 쌓은 독자적 시술 노하우 / 누적 고객 3천여명</td></tr>
+      <tr><td>3줄</td><td><b>고객이 얻을 것</b><em>여기서 뭘 가져가는지</em></td><td>👇 내 몸값을 키우는 브랜딩 &amp; 시크릿 정보 공유</td></tr>
+      <tr><td>4줄</td><td><b>예약 안내</b><em>다음 행동</em></td><td>👇 예약 및 상담은 아래 링크로 👇</td></tr>
+    </table></div>
+    <h3>쓰는 요령</h3>
+    <ul class="list">
+      <li>줄마다 이모지 하나를 앞에 붙이면 눈이 줄을 따라갑니다.</li>
+      <li>숫자를 넣으세요. <span class="m">누적 고객 3천여명</span>, <span class="m">2호점</span> 처럼 <b>셀 수 있는 것</b>이 신뢰를 만듭니다.</li>
+      <li>자기소개는 글자 수가 제한돼 있습니다(현재 150자). 네 줄이 안 들어가면 형용사부터 지우세요.</li>
+      <li>다른 계정(두피·속눈썹 등)이 있으면 <span class="m">두피계정 : @scalp_by_song</span> 처럼 한 줄로 연결해 둡니다.</li>
+    </ul>
+    <div class="callout warn">
+      <div class="t">빼야 할 문장</div>
+      <p>"예쁨을 드려요", "고객님의 만족이 최우선", "정성을 다하겠습니다".</p>
+      <p class="go">→ 전부 아무나 쓸 수 있는 말이라 아무 역할도 못 합니다.</p>
+    </div>
+  </section>
+
+  <a class="cta-inline" href="https://open.kakao.com/o/pfEDVwFi" target="_blank" rel="noopener">
+    <span class="icon">?</span>
+    <span class="txt">
+      <span class="t1">내 자기소개 4줄, 이렇게 써도 될까요?</span>
+      <span class="t2">써 본 문장을 가져오시면 원장님 샵에 맞게 같이 다듬어 드립니다.</span>
+    </span>
+    <span class="arrow">물어보기 →</span>
+  </a>
+
+  <!-- ═══ 6 ═══ -->
+  <section class="step">
+    <div class="step-head"><span class="no">06</span><span class="ln"></span><span class="cnt">이번 주</span></div>
+    <h2>링크<br>— 예약으로 가는 유일한 문</h2>
+    <p class="sub">클릭 한 번에 상담창이 열리는 게 가장 좋습니다.</p>
+    <div class="path"><span class="k">경로</span><span class="v">프로필 편집 → 링크 → 외부 링크 추가</span></div>
+    <h3>바꿀 값</h3>
+    <ul class="list">
+      <li>예약·상담으로 <b>바로</b> 떨어지는 주소 1개</li>
+      <li>예시 — 카카오 채널 상담(<span class="m">pf.kakao.com/...</span>), 인포크링크 같은 링크 모음(<span class="m">link.inpock.co.kr/...</span>)</li>
+      <li>자기소개 마지막 줄에서 👇 로 링크를 가리켜 주세요. 링크가 있는데 아무도 안 누르는 이유는 <b>가리키지 않아서</b>입니다.</li>
+    </ul>
+    <h3>왜</h3>
+    <p>인스타 안에서는 예약을 받을 수 없습니다. 링크가 유일한 출구인데, 여기서 한 번 더 고르게 만들면(홈페이지 → 메뉴 → 예약) 사람이 샙니다.</p>
+    <p class="note">자기소개 링크는 여러 개(최대 5개) 넣을 수 있지만, 예약률만 보면 1개가 가장 셉니다. 선택지가 늘면 결정이 늦어집니다.</p>
+  </section>
+
+  <!-- ═══ 7 ═══ -->
+  <section class="step">
+    <div class="step-head"><span class="no">07</span><span class="ln"></span><span class="cnt">이번 주</span></div>
+    <h2>고정 게시물 3개<br>— 들어오자마자 보이는 첫 줄</h2>
+    <p class="sub">최신 게시물이 뭐든 이 3칸은 고정입니다.</p>
+    <div class="path"><span class="k">경로</span><span class="v">해당 게시물 → 오른쪽 위 ⋯ → 내 프로필에 고정</span></div>
+    <div class="tbl-wrap"><table class="tbl">
+      <tr><th>칸</th><th>넣을 것</th><th>실제 예시</th></tr>
+      <tr><td>①</td><td><b>대표 시술 1</b><em>내가 제일 잘하는 것</em></td><td>상담부터 시술까지 어떻게 진행될까요?</td></tr>
+      <tr><td>②</td><td><b>브랜딩 1</b><em>내가 누구인지</em></td><td>원장 소개 / 샵 소개 릴스</td></tr>
+      <tr><td>③</td><td><b>후기·자료 1</b><em>결과를 증명하는 것</em></td><td>탈각 후 모음 (시술 사례 모아 둔 게시물)</td></tr>
+    </table></div>
+    <h3>왜</h3>
+    <p>프로필에 들어오면 사진 아래 <b>첫 줄 3칸</b>이 가장 먼저 보입니다. 여기에 "무엇을 잘하고 / 누구이고 / 결과가 어떤지"를 미리 깔아 두는 겁니다.</p>
+  </section>
+
+  <!-- ═══ 8 ═══ -->
+  <section class="step">
+    <div class="step-head"><span class="no">08</span><span class="ln"></span><span class="cnt">이번 주</span></div>
+    <h2>하이라이트<br>— 고객이 궁금해할 것</h2>
+    <p class="sub">3개 이상, 고객이 예약 전에 묻는 순서대로 배치합니다.</p>
+    <div class="path"><span class="k">경로</span><span class="v">스토리 올리기 → 하이라이트에 추가 (또는 프로필에서 + → 새로 만들기)</span></div>
+    <div class="tbl-wrap"><table class="tbl">
+      <tr><th>제목</th><th>담을 것</th></tr>
+      <tr><td>Photo Review</td><td>시술 전후 사진</td></tr>
+      <tr><td>Review 2</td><td>글 후기·DM 캡처</td></tr>
+      <tr><td>디자인 안내</td><td>눈썹 디자인 종류</td></tr>
+      <tr><td>Q&amp;A</td><td>자주 묻는 질문 (아프나요 / 지속 기간 / 리터치 / 주의사항)</td></tr>
+      <tr><td>그 밖</td><td>다른 시술이 있으면 따로 — <span class="m">속눈썹펌</span> 등</td></tr>
+    </table></div>
+    <h3>왜</h3>
+    <p>하이라이트는 <b>FAQ 창구</b>입니다. 여기가 비어 있으면 그 질문이 전부 DM으로 들어와서 원장님 시간을 먹습니다. 한 번 만들어 두면 24시간 대신 답해 줍니다.</p>
+    <p class="note">커버 이미지는 톤을 맞추세요(같은 배경색 + 글씨 하나). 제목은 5글자 이내로 짧게 — 길면 잘립니다.</p>
+  </section>
+
+  <!-- ═══ 9 ═══ -->
+  <section class="step">
+    <div class="step-head"><span class="no">09</span><span class="ln"></span><span class="cnt">탭 정리</span></div>
+    <h2>릴스 · 리믹스 · 태그됨</h2>
+    <p class="sub">원장님은 격자 탭만 보지만, 손님은 탭을 눌러 봅니다.</p>
+    <div class="path"><span class="k">경로</span><span class="v">프로필 사진 아래 탭 줄 (격자 / 릴스 / 리믹스 / 태그됨)</span></div>
+    <div class="tbl-wrap"><table class="tbl">
+      <tr><th>탭</th><th>체크할 것</th></tr>
+      <tr><td>릴스</td><td>영상이 여기 다 모입니다. 썸네일 글씨가 잘리진 않았는지 쭉 내려 보세요.</td></tr>
+      <tr><td>리믹스</td><td>남이 내 영상에 붙인 리믹스가 쌓입니다. 원하지 않는 게 있으면 해당 영상에서 리믹스 허용을 끄세요.</td></tr>
+      <tr><td>태그됨</td><td>아무나 나를 태그하면 여기 들어옵니다. <b>설정 → 태그 및 멘션 → 수동 승인</b>으로 바꿔 두세요.<em>경쟁 샵 홍보나 광고 계정 태그가 내 프로필에 걸려 있는 경우가 생각보다 많습니다.</em></td></tr>
+    </table></div>
+    <h3>왜</h3>
+    <p>관리 안 된 탭 하나가 <b>"여기 운영 안 하는 곳인가?"</b>를 만듭니다.</p>
+  </section>
+
+  <!-- ═══ 체크리스트 ═══ -->
+  <section class="step">
+    <div class="step-head"><span class="no">✓</span><span class="ln"></span><span class="cnt">13 항목</span></div>
+    <h2>저장용 체크리스트</h2>
+    <p class="sub">내 프로필을 열어 놓고 손님 눈으로 확인하세요. 체크 상태는 이 브라우저에 저장됩니다.</p>
+
+    <label class="item"><input type="checkbox"><span class="box"></span><span class="txt">아이디가 검색해서 찾을 수 있는 이름인가</span></label>
+    <label class="item"><input type="checkbox"><span class="box"></span><span class="txt">이름 칸에 <b>지역명</b>이 들어가 있나</span></label>
+    <label class="item"><input type="checkbox"><span class="box"></span><span class="txt">이름 칸에 <b>시술명</b>이 들어가 있나</span></label>
+    <label class="item"><input type="checkbox"><span class="box"></span><span class="txt">프로필 사진에 얼굴이 보이나</span></label>
+    <label class="item"><input type="checkbox"><span class="box"></span><span class="txt">카테고리(건강/뷰티)가 떠 있나</span></label>
+    <label class="item"><input type="checkbox"><span class="box"></span><span class="txt">자기소개가 4줄 순서대로 되어 있나</span></label>
+    <label class="item"><input type="checkbox"><span class="box"></span><span class="txt">자기소개에 숫자(경력·누적 고객)가 들어 있나</span></label>
+    <label class="item"><input type="checkbox"><span class="box"></span><span class="txt">링크가 클릭 한 번에 상담창으로 가나</span></label>
+    <label class="item"><input type="checkbox"><span class="box"></span><span class="txt">링크를 👇 로 가리켜 주고 있나</span></label>
+    <label class="item"><input type="checkbox"><span class="box"></span><span class="txt">고정 게시물 3개가 다 채워져 있나</span></label>
+    <label class="item"><input type="checkbox"><span class="box"></span><span class="txt">하이라이트가 3개 이상 있나</span></label>
+    <label class="item"><input type="checkbox"><span class="box"></span><span class="txt">Q&amp;A 하이라이트가 있나</span></label>
+    <label class="item"><input type="checkbox"><span class="box"></span><span class="txt">태그됨 탭에 이상한 게 없나</span></label>
+
+    <div class="judge" data-judge='[[4,"릴스를 보고 들어온 사람이 3초 안에 나가는 프로필입니다. 이름 칸·사진·자기소개부터, 오늘 10분이면 됩니다."],[8,"기본은 갖췄습니다. 이제 링크와 고정 게시물이 비어 있으면 들어온 사람이 예약까지 가지 못합니다."],[12,"거의 다 됐습니다. 빈 칸 하나가 손님이 머뭇거리는 지점입니다."],[13,"프로필이 대표 페이지로 일하고 있습니다. 이제 들어온 사람을 예약으로 넘기는 건 콘텐츠의 몫입니다."]]'>
+      <div class="t">판정</div>
+      <div class="cnt-line"><b class="n">0</b><span class="d">/ 13개 체크</span></div>
+      <div class="msg">체크할수록 판정이 올라갑니다.</div>
+    </div>
+  </section>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="step">
+    <div class="step-head"><span class="no">Q</span><span class="ln"></span><span class="cnt">자주 나오는 질문</span></div>
+    <h2>자주 나오는 질문</h2>
+    <p class="sub">눌러서 펼쳐 보세요.</p>
+
+    <details class="faq"><summary><span class="q">Q</span>아이디를 바꾸면 팔로워가 날아가나요?<span class="pm">+</span></summary>
+      <div class="a"><p>아니요, 팔로워는 그대로입니다. 다만 <b>예전 아이디로 걸어 둔 링크와 태그가 끊깁니다.</b> 명함·네이버 플레이스·카톡 채널에 적어 둔 주소도 같이 고쳐야 합니다.</p></div></details>
+    <details class="faq"><summary><span class="q">Q</span>이름 칸에 키워드를 너무 많이 넣어도 되나요?<span class="pm">+</span></summary>
+      <div class="a"><p>글자 수 제한이 있어서(현재 30자) 어차피 많이 못 넣습니다. <b>지역 2개 + 시술명 + 브랜드명</b> 정도가 한계이자 적정선입니다. 읽었을 때 문장이 아니라 나열이어도 괜찮습니다.</p></div></details>
+    <details class="faq"><summary><span class="q">Q</span>얼굴을 꼭 걸어야 하나요?<span class="pm">+</span></summary>
+      <div class="a"><p>가장 강하지만 필수는 아닙니다. 못 거는 사정이면 <b>시술 중인 손 클로즈업</b>이나 <b>샵 간판</b>을 쓰세요. 기본 아바타와 의미 없는 이미지만 피하면 됩니다.</p></div></details>
+    <details class="faq"><summary><span class="q">Q</span>고정 게시물을 바꾸면 조회수가 떨어지나요?<span class="pm">+</span></summary>
+      <div class="a"><p>고정 자체는 노출에 영향이 없습니다. 다만 고정하면 게시 날짜 순서와 상관없이 맨 앞에 서니까, <b>오래된 영상이라도 반응이 좋았던 것</b>을 올려 두는 게 유리합니다.</p></div></details>
+    <details class="faq"><summary><span class="q">Q</span>하이라이트 커버를 예쁘게 만들 시간이 없습니다<span class="pm">+</span></summary>
+      <div class="a"><p>커버보다 <b>제목과 순서</b>가 먼저입니다. 일단 스토리 캡처 그대로 만들어 두고, 커버는 나중에 한꺼번에 교체하세요. 비어 있는 것보다 투박한 게 낫습니다.</p></div></details>
+  </section>
+
+  <div class="foot"><b>확인 기준</b> · 2026년 10월 · Instagram 최신 버전 기준입니다. 글자 수 제한과 메뉴 이름·위치는 앱 업데이트로 바뀔 수 있으니, 설정 화면에서 한 번 확인하고 적용해 주세요.</div>
+
+  <div class="cta">
+    <div class="pre">Join us</div>
+    <h4>내 프로필,<br>손님 눈에는 어떻게 보일까 궁금하시다면</h4>
+    <p>단톡방에 프로필을 올려 주시면 원장님 상황에 맞게 같이 짚어드리겠습니다.</p>
+    <a class="cta-btn" href="https://open.kakao.com/o/pfEDVwFi" target="_blank" rel="noopener">오픈카톡방 입장하기 →</a>
+    <div class="cta-url">open.kakao.com/o/pfEDVwFi</div>
+  </div>
+
+
+  <div class="tools">
+    <button type="button" onclick="window.print()">인쇄 / PDF 저장</button>
+    <button type="button" id="reset">체크 초기화</button>
+  </div>
+
+  <div class="sign">— 영구오빠 드림</div>
+
+</main>
+
+<div id="dock">
+  <div class="inner">
+    <div class="card">
+      <div style="flex:1;min-width:0">
+        <div class="dock-t1">체크 <span id="dock-count">0</span> / <span id="dock-total">0</span> 완료</div>
+        <div class="dock-t2">내 프로필, 같이 봐드릴까요?</div>
+      </div>
+      <a class="dock-btn" href="https://open.kakao.com/o/pfEDVwFi" target="_blank" rel="noopener">단톡방 입장 →</a>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var KEY = 'yg_insta_profile_check';
+  var allBoxes = Array.prototype.slice.call(document.querySelectorAll('.item input[type=checkbox]'));
+
+  // 체크 상태는 이 브라우저에만 저장됩니다
+  var saved = [];
+  try { saved = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch (e) {}
+  allBoxes.forEach(function(b, i){ if (saved[i]) b.checked = true; });
+  function save(){
+    try { localStorage.setItem(KEY, JSON.stringify(allBoxes.map(function(b){ return b.checked ? 1 : 0; }))); } catch (e) {}
+  }
+
+  var groups = [];
+  document.querySelectorAll('.step').forEach(function(section){
+    var judge = section.querySelector('.judge');
+    if (!judge) return;
+    var levels;
+    try { levels = JSON.parse(judge.getAttribute('data-judge')); } catch (e) { return; }
+    groups.push({ boxes: Array.prototype.slice.call(section.querySelectorAll('.item input[type=checkbox]')), judge: judge, levels: levels });
+  });
+
+  function render(g){
+    var n = 0;
+    g.boxes.forEach(function(b){ if (b.checked) n++; });
+    var idx = g.levels.length - 1;
+    for (var i = 0; i < g.levels.length; i++){
+      if (n <= g.levels[i][0]) { idx = i; break; }
+    }
+    g.judge.querySelector('.n').textContent = n;
+    g.judge.querySelector('.msg').textContent = g.levels[idx][1];
+    g.judge.className = 'judge lv-' + Math.min(idx, 3);
+  }
+
+  var dockCount = document.getElementById('dock-count');
+  document.getElementById('dock-total').textContent = allBoxes.length;
+  function renderDock(){
+    var n = 0;
+    allBoxes.forEach(function(b){ if (b.checked) n++; });
+    dockCount.textContent = n;
+  }
+
+  groups.forEach(function(g){ render(g); });
+  allBoxes.forEach(function(b){
+    b.addEventListener('change', function(){ groups.forEach(render); renderDock(); save(); });
+  });
+  renderDock();
+
+  document.getElementById('reset').addEventListener('click', function(){
+    allBoxes.forEach(function(b){ b.checked = false; });
+    groups.forEach(render); renderDock(); save();
+  });
+
+  // 프롬프트 복사
+  document.querySelectorAll('.prompt').forEach(function(p){
+    var btn = p.querySelector('.copy');
+    if (!btn) return;
+    btn.addEventListener('click', function(){
+      var text = p.querySelector('pre').innerText;
+      function done(){ btn.textContent = '복사됨'; btn.classList.add('done');
+        setTimeout(function(){ btn.textContent = '복사하기'; btn.classList.remove('done'); }, 1600); }
+      if (navigator.clipboard) { navigator.clipboard.writeText(text).then(done, fallback); } else { fallback(); }
+      function fallback(){
+        var ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta);
+        ta.select(); try { document.execCommand('copy'); done(); } catch (e) {} document.body.removeChild(ta);
+      }
+    });
+  });
+
+  // 플로팅 독
+  var dock = document.getElementById('dock');
+  function onScroll(){
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var p = h > 0 ? Math.min(100, (window.scrollY / h) * 100) : 0;
+    dock.classList.toggle('show', p > 12 && p < 95);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+</script>
+
+</body>
+</html>
